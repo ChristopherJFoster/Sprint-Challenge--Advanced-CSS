@@ -34,13 +34,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+An adaptive website has a few different hard-coded widths for certain breakpoints in screen sizes. However, it does not use responsive units (such as %s), so an adaptive website will not function well on the many devices that are between those breakpoints.
+
+A fully responsive website will feature shifts in design at certain breakpoints, but will also use responsive units so that the website looks good in between those breakpoints, and therefore on a much larger variety of screen widths.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+A web developer who designs mobile-first will start with the mobile layout of the page, and then, when adapting the design to larger screen widths, will style the existing elements to be larger, or will add elements and space to fill a larger screen.
+
+A desktop-first developer will work in the opposite direction: starting with the desktop design, the developer will style elements to shrink or stack or disappear as the user’s screen gets smaller.
+
+Theoretically, the two approaches could result in the same user experience. However, since they each require a different mindset, they may result in some differences in design.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+The result of this setting is that 1rem = 10px, and thus we avoid a tricky calculation when sizing our fonts in the responsive rem unit. For example, if we want a 16px font, we can use 1.6rem.
+
 4. How would you describe preprocessing to someone new to CSS?
 
+features to CSS while still producing vanilla CSS in the end. Using a preprocessor such as LESS, we can create variables, reuse bits of code (mixins), and nest @media queries right inside the elements they modify. Since all of these features are translated to vanilla CSS, we do not need to worry about things like W3C standards or browser support.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+My favorite concept in preprocessing is variables. Variables are easy to set up and save so much time and tedium. My first variable was @rtb: 2px dashed red // red test border. I expect I’ll use it (or some version of it) for the rest of my career.
+
+I suppose the concept or feature that gave me a little trouble is the fact that mixins and classes are both prepended by a “.”. There were a few cases where I forgot that something was a mixin because it looked like a class. I also had some trouble setting up the compiler on my Windows machine, but I think it would be easier next time.
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section _will_ prevent you from passing this challenge.
 
@@ -101,7 +119,7 @@ _You will know everything is working properly when you see the styles enabled fo
 
 - [x] [Review the provided home desktop design file](design-files/home-desktop.png). You are to build the missing navigation system and header image. You have been provided all content necessary in the [index.html file](index.html)
 
-- [ ] Navigation Styles: Use the `navigation.less` file for styling.
+- [x] Navigation Styles: Use the `navigation.less` file for styling.
 
 - [ ] Main Content Styles: Use the `home-page.less` file for styling
 

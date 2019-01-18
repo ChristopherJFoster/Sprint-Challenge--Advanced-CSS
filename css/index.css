@@ -159,15 +159,23 @@ p {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  margin-top: 103px;
 }
 header {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
 }
+.header-centerer {
+  display: flex;
+  justify-content: center;
+}
 header {
   background-color: #f6f6f6;
-  margin-top: 15px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
   border-bottom: 1px solid #f1f1f1;
 }
 @media (max-width: 500px) {

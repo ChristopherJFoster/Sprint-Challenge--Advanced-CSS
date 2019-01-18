@@ -1,8 +1,15 @@
 // Navigation code here
 
+// Added to quickly get fixed nav working:
+.header-centerer {
+  .flex-c;
+}
+
 header {
   background-color: @nav-bg;
-  margin-top: 15px;
+  position: fixed;
+  top: 0;
+  .flex-c;
   @media @phone {
     margin-top: 0;
   }

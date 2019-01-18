@@ -1,1 +1,31 @@
 // Navigation code here
+
+header {
+  background-color: @nav-bg;
+  margin-top: 15px;
+  border-bottom: 1px solid @nav-border;
+
+  .nav-content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; // <-- I'm excited that I remembered that flex-direction: column changes the axes, so align-items centers horizontally instead of justify-content.
+    h1 {
+      font-size: 4rem;
+      padding: 15px 0;
+    }
+    nav {
+      width: 48%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.6rem;
+      color: @nav-font;
+      padding: 5px 0 10px 0;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

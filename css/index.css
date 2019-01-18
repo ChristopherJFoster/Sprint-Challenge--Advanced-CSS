@@ -205,6 +205,7 @@ header .nav-content nav {
 }
 header .nav-content nav a {
   text-decoration: none;
+  color: black;
 }
 @media (max-width: 500px) {
   header .nav-content nav {

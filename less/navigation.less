@@ -11,20 +11,19 @@ header {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center; // <-- I'm excited that I remembered that flex-direction: column changes the axes, so align-items centers horizontally instead of justify-content.
+    align-items: center; // <-- I'm excited that I remembered that flex-direction: column changes the two axes, so align-items centers horizontally instead of justify-content.
     h1 {
       font-size: 4rem;
       padding: 15px 0;
     }
     nav {
       width: 48%;
-      display: flex;
-      justify-content: space-between;
+      .flex-sb;
       font-size: 1.6rem;
       color: @nav-font;
       padding: 5px 0 10px 0;
       a {
-        text-decoration: none;
+        .link-style;
       }
     }
   }

@@ -3,6 +3,9 @@
 header {
   background-color: @nav-bg;
   margin-top: 15px;
+  @media @phone {
+    margin-top: 0;
+  }
   border-bottom: 1px solid @nav-border;
 
   .nav-content {
@@ -17,13 +20,17 @@ header {
       padding: 15px 0;
     }
     nav {
-      width: 48%;
-      .flex-sb;
+      width: 52%;
+      .flex-sa;
       font-size: 1.6rem;
       color: @nav-font;
       padding: 5px 0 10px 0;
       a {
         .link-style;
+      }
+      @media @phone {
+        width: 80%;
+        .flex-sa;
       }
     }
   }

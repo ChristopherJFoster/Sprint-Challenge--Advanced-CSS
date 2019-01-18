@@ -1,1 +1,44 @@
 // Navigation code here
+
+// Added to quickly get fixed nav working:
+.header-centerer {
+  .flex-c;
+}
+
+header {
+  background-color: @nav-bg;
+  position: fixed;
+  top: 0;
+  .flex-c;
+  @media @phone {
+    margin-top: 0;
+  }
+  border-bottom: 1px solid @nav-border;
+
+  .nav-content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; // <-- I'm excited that I remembered that flex-direction: column changes the two axes, so align-items centers horizontally instead of justify-content.
+    h1 {
+      font-size: 4rem;
+      padding: 15px 0;
+    }
+    nav {
+      width: 52%;
+      .flex-sa;
+      font-size: 1.6rem;
+      color: @nav-font;
+      padding: 5px 0 10px 0;
+      a {
+        .link-style;
+      }
+      @media @phone {
+        width: 80%;
+        .flex-sa;
+      }
+    }
+  }
+}

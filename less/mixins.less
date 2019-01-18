@@ -1,1 +1,36 @@
 // Mixins Here
+
+.link-style() {
+  text-decoration: none;
+  color: black;
+} // This isn't an interesting mixin for the design as it is, but it would allow for quick styling of page-wide or site-wide links.
+
+.flex-sb() {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-sa() {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-c() {
+  display: flex;
+  justify-content: center;
+}
+
+.button-styler(@bcolor, @fcolor) {
+  background-color: @bcolor;
+  color: @fcolor;
+  cursor: pointer;
+  border: 1px solid @ebony-clay;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 6.5px 17px;
+  border-radius: 7px;
+  &:hover {
+    background-color: @fcolor;
+    color: @bcolor;
+  }
+}

@@ -34,19 +34,37 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+An adaptive website has a few different hard-coded widths for certain breakpoints in screen sizes. However, it does not use responsive units (such as %s), so an adaptive website will not function well on the many devices that are between those breakpoints.
+
+A fully responsive website will feature shifts in design at certain breakpoints, but will also use responsive units so that the website looks good in between those breakpoints, and therefore on a much larger variety of screen widths.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+A web developer who designs mobile-first will start with the mobile layout of the page, and then, when adapting the design to larger screen widths, will style the existing elements to be larger, or will add elements and space to fill a larger screen.
+
+A desktop-first developer will work in the opposite direction: starting with the desktop design, the developer will style elements to shrink or stack or disappear as the user’s screen gets smaller.
+
+Theoretically, the two approaches could result in the same user experience. However, since they each require a different mindset, they may result in some differences in design.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+The result of this setting is that 1rem = 10px, and thus we avoid a tricky calculation when sizing our fonts in the responsive rem unit. For example, if we want a 16px font, we can use 1.6rem.
+
 4. How would you describe preprocessing to someone new to CSS?
+
+features to CSS while still producing vanilla CSS in the end. Using a preprocessor such as LESS, we can create variables, reuse bits of code (mixins), and nest @media queries right inside the elements they modify. Since all of these features are translated to vanilla CSS, we do not need to worry about things like W3C standards or browser support.
 
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
 
-You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
+My favorite concept in preprocessing is variables. Variables are easy to set up and save so much time and tedium. My first variable was @rtb: 2px dashed red // red test border. I expect I’ll use it (or some version of it) for the rest of my career.
+
+I suppose the concept or feature that gave me a little trouble is the fact that mixins and classes are both prepended by a “.”. There were a few cases where I forgot that something was a mixin because it looked like a class. I also had some trouble setting up the compiler on my Windows machine, but I think it would be easier next time.
+
+You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section _will_ prevent you from passing this challenge.
 
 ## Project Set Up
 
-Because you are using a preprocessor, there are two parts to setting up your project.  Be sure to run through the git set up first and then set up the preprocessor.
+Because you are using a preprocessor, there are two parts to setting up your project. Be sure to run through the git set up first and then set up the preprocessor.
 
 ### Git Set up
 
@@ -58,21 +76,20 @@ Follow these steps to set up your project:
 - [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
- 
+
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo). **Please don't merge your own pull request**
 - [ ] Add your project manager as a reviewer on the pull-request
 - [ ] Your project manager will count the project as complete by merging the branch back into master.
- 
 
 ### Preprocessor Set up
 
-* [ ] Verify that you have LESS installed correctly by running `lessc -v` in your terminal, if you don't get a version message back, reach out to your project manager for help.
-* [ ] Open your terminal and navigate to your preprocessing project by using the `cd` command
-* [ ] Once in your project's root folder, run the following command `less-watch-compiler less css index.less`
-* [ ] Verify your compiler is working correctly by changing the `background-color` on the `html` selector to `red` in your `index.less` file.
-* [ ] Once you see the red screen, you can delete that style and you're ready to start on the next task
+- [ ] Verify that you have LESS installed correctly by running `lessc -v` in your terminal, if you don't get a version message back, reach out to your project manager for help.
+- [ ] Open your terminal and navigate to your preprocessing project by using the `cd` command
+- [ ] Once in your project's root folder, run the following command `less-watch-compiler less css index.less`
+- [ ] Verify your compiler is working correctly by changing the `background-color` on the `html` selector to `red` in your `index.less` file.
+- [ ] Once you see the red screen, you can delete that style and you're ready to start on the next task
 
 ## Minimum Viable Product
 
@@ -80,7 +97,7 @@ Your finished project must include all of the following requirements:
 
 ### Import LESS Files
 
-* [ ] Navigate to your `index.less` file. Notice the file is blank. You have been asked to use a certain import order. That order is as follows:
+- [x] Navigate to your `index.less` file. Notice the file is blank. You have been asked to use a certain import order. That order is as follows:
 
 ```markdown
 1.variables.less
@@ -92,35 +109,35 @@ Your finished project must include all of the following requirements:
 7.home-page.less
 ```
 
-_You will know everything is working properly when you see the styles enabled for the provided content._  
+_You will know everything is working properly when you see the styles enabled for the provided content._
 
 ### Home Page - Desktop HTML & LESS
 
-* [ ] Take 10 minutes to review the code that has already been provided for you. Take time to see how the home page was built.
+- [x] Take 10 minutes to review the code that has already been provided for you. Take time to see how the home page was built.
 
-* [ ] Add a viewport meta tag to the head of your index.html page
+- [x] Add a viewport meta tag to the head of your index.html page
 
-* [ ] [Review the provided home desktop design file](design-files/home-desktop.png). You are to build the missing navigation system and header image. You have been provided all content necessary in the [index.html file](index.html)
+- [x] [Review the provided home desktop design file](design-files/home-desktop.png). You are to build the missing navigation system and header image. You have been provided all content necessary in the [index.html file](index.html)
 
-* [ ] Navigation Styles: Use the `navigation.less` file for styling.
+- [x] Navigation Styles: Use the `navigation.less` file for styling.
 
-* [ ] Main Content Styles: Use the `home-page.less` file for styling
+- [x] Main Content Styles: Use the `home-page.less` file for styling
 
-* [ ] LESS Mixins: Create and use 2 different mixins to aid your styling. Use the `mixins.less` file for your mixins
+- [x] LESS Mixins: Create and use 2 different mixins to aid your styling. Use the `mixins.less` file for your mixins
 
-* [ ] LESS Parametric Mixin: create a parametric mixin that is used to create the `sign up` button styles.
+- [x] LESS Parametric Mixin: create a parametric mixin that is used to create the `sign up` button styles.
 
-* [ ]  Use at least 2 parameters to create your button
+- [x] Use at least 2 parameters to create your button
 
-* [ ] Create a hover state that swaps the background color and font color of the base button styles.
+- [x] Create a hover state that swaps the background color and font color of the base button styles.
 
 ### Mobile Design
 
-* [ ] Create a `@phone` variable that contains a `max-width: 500px` media query string. Use the `@phone` variable for all your nested mobile styling.
+- [x] Create a `@phone` variable that contains a `max-width: 500px` media query string. Use the `@phone` variable for all your nested mobile styling.
 
-* [ ] [Review the provided home mobile design file](design-files/home-mobile.png). Match your mobile styling the best you can using the design file.
+- [x] [Review the provided home mobile design file](design-files/home-mobile.png). Match your mobile styling the best you can using the design file.
 
-* [ ] Push your changes and create a pull request if you haven't already.
+- [x] Push your changes and create a pull request if you haven't already.
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
@@ -128,10 +145,10 @@ In your solution, it is essential that you follow best practices and produce cle
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-* [ ] Build a page of your choosing from the navigation items. Come up with content and images that fit the theme.
+- [ ] Build a page of your choosing from the navigation items. Come up with content and images that fit the theme.
 
-* [ ] Introduce CSS animations to your site.
+- [ ] Introduce CSS animations to your site.
 
-* [ ] Create a fixed navigation and add some opacity to the background
+- [x] Create a fixed navigation and add some opacity to the background
 
-* [ ] Create a form that would allow someone to sign up for a Spacewalkers Magazine subscription
+- [ ] Create a form that would allow someone to sign up for a Spacewalkers Magazine subscription
